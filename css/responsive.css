@@ -1,0 +1,260 @@
+/* ==========================================================================
+   AETHERIA STUDIO - RESPONSIVE STYLES & MOBILE DRAWER
+   ========================================================================== */
+
+/* Mobile Drawer Styles */
+.mobile-drawer {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 82%;
+  max-width: 380px;
+  height: 100vh;
+  background: var(--bg-primary);
+  border-left: 1px solid var(--border-card);
+  box-shadow: var(--shadow-lg);
+  z-index: 2100;
+  display: flex;
+  flex-direction: column;
+  padding: 30px 24px;
+  transition: right 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mobile-drawer.open {
+  right: 0;
+}
+
+.mobile-drawer-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(4px);
+  z-index: 2050;
+  opacity: 0;
+  visibility: hidden;
+  transition: all var(--transition-fast);
+}
+
+.mobile-drawer-backdrop.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.drawer-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 36px;
+}
+
+.drawer-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.drawer-link {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+  display: block;
+  transition: color var(--transition-fast);
+}
+
+.drawer-link:hover,
+.drawer-link.active {
+  color: var(--accent-primary);
+}
+
+.drawer-footer {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding-top: 24px;
+  border-top: 1px solid var(--border-subtle);
+}
+
+/* --------------------------------------------------------------------------
+   Breakpoints
+   -------------------------------------------------------------------------- */
+
+/* Large Tablets & Small Laptops (< 1024px) */
+@media (max-width: 1024px) {
+  :root {
+    --section-padding-y: 80px;
+  }
+
+  .hero-stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .stat-item:nth-child(2) {
+    border-right: none;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .values-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .portfolio-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .estimator-wrapper {
+    grid-template-columns: 1fr;
+    gap: 36px;
+    padding: 32px;
+  }
+
+  .footer-top-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Tablets & Mobile (< 768px) */
+@media (max-width: 768px) {
+  :root {
+    --section-padding-y: 65px;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .mobile-toggle-btn {
+    display: flex;
+  }
+
+  .top-bar {
+    font-size: 0.78rem;
+    padding: 6px 12px;
+  }
+
+  .hero-section {
+    padding-top: 40px;
+    padding-bottom: 60px;
+  }
+
+  .hero-title {
+    font-size: 2.3rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.05rem;
+  }
+
+  .floating-metric {
+    display: none; /* Hide floating badges on smaller screens to prevent overflow */
+  }
+
+  .client-logos {
+    gap: 28px;
+  }
+
+  .form-group-row {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .budget-pills {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .contact-form-container {
+    padding: 28px 20px;
+  }
+
+  .footer-top-grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .footer-bottom-row {
+    flex-direction: column;
+    gap: 16px;
+    text-align: center;
+  }
+
+  .carousel-controls {
+    margin-top: 24px;
+  }
+
+  .testimonial-quote {
+    font-size: 1.15rem;
+  }
+
+  .testimonial-card {
+    padding: 32px 20px;
+  }
+
+  .modal-dialog {
+    padding: 24px 18px;
+  }
+}
+
+/* Small Mobile Screens (< 480px) */
+@media (max-width: 480px) {
+  .hero-stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .stat-item {
+    border-right: none;
+    border-bottom: 1px solid var(--border-subtle);
+    padding-bottom: 14px;
+  }
+
+  .stat-item:last-child {
+    border-bottom: none;
+  }
+
+  .values-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .portfolio-controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .search-box {
+    width: 100%;
+  }
+
+  .hero-cta-group .btn {
+    width: 100%;
+  }
+
+  .option-pill-grid {
+    grid-template-columns: 1fr;
+  }
+}

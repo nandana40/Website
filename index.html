@@ -1,0 +1,1171 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AETHERIA Studio | Next-Generation Digital Products & Spatial Engineering</title>
+  <meta name="description" content="AETHERIA is a premier digital product studio bridging obsidian-level design craft with rigorous cloud and AI engineering for high-growth enterprises.">
+  <meta name="keywords" content="digital agency, UI/UX design, web development, spatial computing, AI interfaces, modern website">
+  
+  <!-- OpenGraph / Social Meta Tags -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="AETHERIA Studio | Next-Gen Digital Products">
+  <meta property="og:description" content="Transforming visionary concepts into high-performance digital realities with precision craft and scalable engineering.">
+  <meta property="og:image" content="assets/images/hero-showcase.jpg">
+  
+  <meta name="theme-color" content="#08090d">
+
+  <!-- Core & Component Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- Background Interactive Canvas -->
+  <canvas id="canvas-bg"></canvas>
+
+  <!-- Top Progress Bar Indicator -->
+  <div id="scroll-progress"></div>
+
+  <!-- Top Announcement Notification Banner -->
+  <aside class="top-bar" aria-label="Announcement">
+    <span>✨ <strong>Nexus v4.0 is live:</strong> Read our 2026 Annual Engineering & Spatial Design Report</span>
+    <a href="#portfolio" class="top-bar-link">
+      Explore Report
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M5 12h14M12 5l7 7-7 7"/>
+      </svg>
+    </a>
+    <button class="top-bar-close" aria-label="Close Announcement">&times;</button>
+  </aside>
+
+  <!-- Sticky Navbar Header -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-container">
+      
+      <!-- Brand Logo -->
+      <a href="#home" class="brand-logo" aria-label="AETHERIA Studio Home">
+        <div class="logo-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+            <polyline points="2 17 12 22 22 17"></polyline>
+            <polyline points="2 12 12 17 22 12"></polyline>
+          </svg>
+        </div>
+        <span>AETHERIA</span>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <nav aria-label="Primary Navigation">
+        <ul class="nav-links">
+          <li><a href="#home" class="nav-link active">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#services" class="nav-link">Services</a></li>
+          <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+          <li><a href="#estimator" class="nav-link">Estimator</a></li>
+          <li><a href="#testimonials" class="nav-link">Reviews</a></li>
+          <li><a href="#faq" class="nav-link">FAQ</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Nav Action Controls -->
+      <div class="nav-actions">
+        <!-- Dark/Light Theme Toggle -->
+        <button class="theme-toggle-btn" aria-label="Toggle Dark and Light theme" title="Toggle theme">
+          <svg class="theme-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+        </button>
+
+        <!-- Book Consultation Modal CTA -->
+        <button class="btn btn-primary btn-sm open-consultation-modal" id="header-book-call-btn">
+          <span>Book Consultation</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="7" y1="17" x2="17" y2="7"></line>
+            <polyline points="7 7 17 7 17 17"></polyline>
+          </svg>
+        </button>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button class="mobile-toggle-btn" aria-label="Open mobile navigation menu">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu & Backdrop -->
+  <div class="mobile-drawer-backdrop" id="drawer-backdrop"></div>
+  <aside class="mobile-drawer" id="mobile-drawer" aria-label="Mobile Navigation">
+    <div class="drawer-header">
+      <div class="brand-logo">
+        <div class="logo-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+            <polyline points="2 17 12 22 22 17"></polyline>
+            <polyline points="2 12 12 17 22 12"></polyline>
+          </svg>
+        </div>
+        <span>AETHERIA</span>
+      </div>
+      <button class="modal-close-btn drawer-close-btn" aria-label="Close navigation menu">&times;</button>
+    </div>
+
+    <ul class="drawer-links">
+      <li><a href="#home" class="drawer-link">Home</a></li>
+      <li><a href="#about" class="drawer-link">About</a></li>
+      <li><a href="#services" class="drawer-link">Services</a></li>
+      <li><a href="#portfolio" class="drawer-link">Portfolio</a></li>
+      <li><a href="#estimator" class="drawer-link">Estimator</a></li>
+      <li><a href="#testimonials" class="drawer-link">Reviews</a></li>
+      <li><a href="#faq" class="drawer-link">FAQ</a></li>
+      <li><a href="#contact" class="drawer-link">Contact</a></li>
+    </ul>
+
+    <div class="drawer-footer">
+      <button class="btn btn-primary open-consultation-modal" style="width: 100%;">
+        <span>Book Consultation</span>
+      </button>
+      <div style="display: flex; justify-content: space-between; align-items: center; color: var(--text-muted); font-size: 0.85rem;">
+        <span>Theme Mode</span>
+        <button class="theme-toggle-btn" aria-label="Toggle theme">
+          <svg class="theme-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="5"></circle>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </aside>
+
+  <main>
+    <!-- ======================================================================
+         SECTION 1: HERO
+         ====================================================================== -->
+    <section class="hero-section" id="home">
+      <div class="ambient-glow glow-indigo" style="top: -100px; left: 50%; transform: translateX(-50%);"></div>
+      
+      <div class="container">
+        <div class="hero-content">
+          
+          <!-- Hero Status Badge -->
+          <div class="hero-badge">
+            <span class="status-dot"></span>
+            <span>Now Booking Q2 & Q3 2026 • Top 1% Global Design & Engineering</span>
+          </div>
+
+          <!-- Hero Headline -->
+          <h1 class="hero-title">
+            Transforming Visionary Concepts into <span class="text-gradient">High-Performance</span> Digital Realities
+          </h1>
+
+          <!-- Hero Subtitle -->
+          <p class="hero-subtitle">
+            We partner with ambitious enterprises and pioneering founders to architect, design, and engineer world-class web applications, spatial systems, and AI-powered interfaces.
+          </p>
+
+          <!-- Hero Action CTAs -->
+          <div class="hero-cta-group">
+            <a href="#portfolio" class="btn btn-primary btn-lg" id="hero-explore-work-btn">
+              <span>Explore Selected Work</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </a>
+            <a href="#estimator" class="btn btn-secondary btn-lg" id="hero-estimator-btn">
+              <span>Calculate Project Cost</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="4" y="2" width="16" height="20" rx="2"></rect>
+                <line x1="8" y1="6" x2="16" y2="6"></line>
+                <line x1="16" y1="14" x2="16" y2="18"></line>
+                <path d="M16 10h.01"></path>
+                <path d="M12 10h.01"></path>
+                <path d="M8 10h.01"></path>
+                <path d="M12 14h.01"></path>
+                <path d="M8 14h.01"></path>
+                <path d="M12 18h.01"></path>
+                <path d="M8 18h.01"></path>
+              </svg>
+            </a>
+          </div>
+
+        </div>
+
+        <!-- Hero Visual Showcase with Floating Metrics -->
+        <div class="hero-visual-wrapper">
+          
+          <div class="floating-metric metric-1">
+            <div class="metric-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
+                <polyline points="17 6 23 6 23 12"></polyline>
+              </svg>
+            </div>
+            <div>
+              <div class="metric-title">Performance Boost</div>
+              <div class="metric-value">+340% User Velocity</div>
+            </div>
+          </div>
+
+          <div class="floating-metric metric-2">
+            <div class="metric-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+              </svg>
+            </div>
+            <div>
+              <div class="metric-title">Client Satisfaction</div>
+              <div class="metric-value">99.4% CSAT Score</div>
+            </div>
+          </div>
+
+          <div class="hero-visual-card">
+            <img src="assets/images/hero-showcase.jpg" alt="AETHERIA Studio Digital Interface Showcase" width="1200" height="675">
+          </div>
+        </div>
+
+        <!-- Hero Stats Bar -->
+        <div class="hero-stats-grid">
+          <div class="stat-item">
+            <div class="stat-number">150+</div>
+            <div class="stat-label">Production Products Shipped</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">$420M+</div>
+            <div class="stat-label">Client Venture Funding Raised</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">99.4%</div>
+            <div class="stat-label">Client Retention & Satisfaction</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">18</div>
+            <div class="stat-label">Global Design & Tech Awards</div>
+          </div>
+        </div>
+
+        <!-- Social Proof Client Logo Strip -->
+        <div class="client-proof-section">
+          <p class="client-proof-title">Trusted by engineering & product leaders from industry pioneers</p>
+          <div class="client-logos">
+            <span class="client-logo-item">VERCEL</span>
+            <span class="client-logo-item">STRIPE</span>
+            <span class="client-logo-item">LINEAR</span>
+            <span class="client-logo-item">FIGMA</span>
+            <span class="client-logo-item">OPENAI</span>
+            <span class="client-logo-item">NOTION</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SECTION 2: ABOUT US
+         ====================================================================== -->
+    <section class="section" id="about">
+      <div class="container">
+        
+        <div class="section-header">
+          <span class="section-badge">// 01. ABOUT US</span>
+          <h2 class="section-title">Where Obsessive Craft Meets <span class="text-gradient">Rigorous Engineering</span></h2>
+          <p class="section-description">
+            We operate at the rare intersection of avant-garde visual artistry and battle-tested software engineering, ensuring your product looks breathtaking and scales reliably to millions of users.
+          </p>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-narrative">
+            <h3>Crafting Digital Masterpieces Without Bloat or Compromise</h3>
+            <p>
+              Founded by former senior design architects and distributed systems engineers from Silicon Valley and Scandinavia, AETHERIA was established with a singular mission: to eliminate the painful chasm between visionary product designers and complex engineering execution.
+            </p>
+            <p>
+              We don't build generic template websites. Every typography pairing, motion curve, micro-interaction, database schema, and serverless edge route is custom-engineered to deliver emotional resonance and blistering sub-second response times.
+            </p>
+            
+            <div style="display: flex; gap: 16px; margin-top: 30px;">
+              <a href="#services" class="btn btn-primary">Our Capabilities →</a>
+              <button class="btn btn-outline open-consultation-modal">Meet Our Partners</button>
+            </div>
+          </div>
+
+          <!-- Interactive Tabs Component -->
+          <div class="about-tabs-card" style="background: var(--bg-card); border: 1px solid var(--border-card); border-radius: var(--border-radius-lg); padding: 32px;">
+            <div class="about-tabs-nav" role="tablist">
+              <button class="tab-btn active" data-tab="philosophy" role="tab">Our Philosophy</button>
+              <button class="tab-btn" data-tab="process" role="tab">The 4-Stage Process</button>
+              <button class="tab-btn" data-tab="standards" role="tab">Engineering Standards</button>
+            </div>
+
+            <!-- Tab 1: Philosophy -->
+            <div class="tab-pane active" id="tab-philosophy">
+              <h4 style="margin-bottom: 12px; font-size: 1.25rem;">Human-Centric Elegance & Velocity</h4>
+              <p style="margin-bottom: 16px;">We believe software should feel tactile, fast, and effortlessly natural. Every microsecond of latency degrades human cognition and trust.</p>
+              <p>We reject cookie-cutter UI libraries in favor of tailored design systems that tell an authentic brand story and command industry authority.</p>
+            </div>
+
+            <!-- Tab 2: Process -->
+            <div class="tab-pane" id="tab-process">
+              <div class="process-steps-list">
+                <div class="process-step-item">
+                  <span class="step-num">01</span>
+                  <div>
+                    <strong style="color: var(--text-primary); display: block;">Discovery & System Audit</strong>
+                    <span style="font-size: 0.9rem; color: var(--text-secondary);">Deep dive into product goals, user archetypes, telemetry data, and technical constraints.</span>
+                  </div>
+                </div>
+                <div class="process-step-item">
+                  <span class="step-num">02</span>
+                  <div>
+                    <strong style="color: var(--text-primary); display: block;">Interactive Prototyping</strong>
+                    <span style="font-size: 0.9rem; color: var(--text-secondary);">Crafting high-fidelity interactive prototypes in code so stakeholders test real motion and feel.</span>
+                  </div>
+                </div>
+                <div class="process-step-item">
+                  <span class="step-num">03</span>
+                  <div>
+                    <strong style="color: var(--text-primary); display: block;">Production Architecture</strong>
+                    <span style="font-size: 0.9rem; color: var(--text-secondary);">Writing clean, typed, modular code with automated CI/CD pipelines and comprehensive tests.</span>
+                  </div>
+                </div>
+                <div class="process-step-item">
+                  <span class="step-num">04</span>
+                  <div>
+                    <strong style="color: var(--text-primary); display: block;">Launch & Continuous Scale</strong>
+                    <span style="font-size: 0.9rem; color: var(--text-secondary);">Zero-downtime deployment, performance tuning, and 30-day post-launch optimization warranty.</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Tab 3: Standards -->
+            <div class="tab-pane" id="tab-standards">
+              <h4 style="margin-bottom: 12px; font-size: 1.25rem;">Zero Compromises on Performance</h4>
+              <ul style="list-style: none; display: flex; flex-direction: column; gap: 10px; margin-top: 14px;">
+                <li style="display: flex; align-items: center; gap: 10px; font-size: 0.95rem;">
+                  <span style="color: var(--accent-cyan);">✦</span> 100/100 Core Web Vitals targets on desktop & mobile
+                </li>
+                <li style="display: flex; align-items: center; gap: 10px; font-size: 0.95rem;">
+                  <span style="color: var(--accent-cyan);">✦</span> Strict WCAG 2.1 AAA accessibility compliance
+                </li>
+                <li style="display: flex; align-items: center; gap: 10px; font-size: 0.95rem;">
+                  <span style="color: var(--accent-cyan);">✦</span> Fully typed TypeScript pipelines with zero build warnings
+                </li>
+                <li style="display: flex; align-items: center; gap: 10px; font-size: 0.95rem;">
+                  <span style="color: var(--accent-cyan);">✦</span> Edge caching, compressed assets, and sub-second cold starts
+                </li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Core Values 4-Card Grid -->
+        <div class="values-grid">
+          <div class="value-card">
+            <div class="value-icon-box">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <circle cx="12" cy="12" r="6"></circle>
+                <circle cx="12" cy="12" r="2"></circle>
+              </svg>
+            </div>
+            <h4>Pixel-Level Precision</h4>
+            <p>Every margin, blur radius, bezier curve, and typographic hierarchy is polished to absolute perfection.</p>
+          </div>
+
+          <div class="value-card">
+            <div class="value-icon-box">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect>
+                <rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect>
+                <line x1="6" y1="6" x2="6.01" y2="6"></line>
+                <line x1="6" y1="18" x2="6.01" y2="18"></line>
+              </svg>
+            </div>
+            <h4>Architecture for Scale</h4>
+            <p>Built on robust modular foundations engineered to handle rapid user exponential growth without rewrites.</p>
+          </div>
+
+          <div class="value-card">
+            <div class="value-icon-box">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                <circle cx="12" cy="12" r="3"></circle>
+              </svg>
+            </div>
+            <h4>Radical Transparency</h4>
+            <p>Direct access to your senior architects via shared Slack/Discord channels, real-time code repos, and sprint demos.</p>
+          </div>
+
+          <div class="value-card">
+            <div class="value-icon-box">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+              </svg>
+            </div>
+            <h4>Relentless Velocity</h4>
+            <p>We work in rapid two-week agile sprints, deploying functional builds every 10 days to maximize your time-to-market.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SECTION 3: SERVICES & CAPABILITIES
+         ====================================================================== -->
+    <section class="section" id="services" style="background: var(--bg-secondary);">
+      <div class="container">
+        
+        <div class="section-header">
+          <span class="section-badge">// 02. WHAT WE DO</span>
+          <h2 class="section-title">Comprehensive Capabilities for <span class="text-gradient">Modern Products</span></h2>
+          <p class="section-description">
+            End-to-end strategy, design, and production engineering services tailored for visionary tech companies and high-growth consumer brands.
+          </p>
+        </div>
+
+        <div class="services-grid">
+          
+          <!-- Service 1 -->
+          <div class="service-card">
+            <div class="service-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 19l7-7 3 3-7 7-3-3z"></path>
+                <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path>
+                <path d="M2 2l7.586 7.586"></path>
+                <circle cx="11" cy="11" r="2"></circle>
+              </svg>
+            </div>
+            <h3>Product Strategy & UI/UX Design</h3>
+            <p>Crafting intuitive, immersive digital user journeys backed by behavioral research, user interviews, and rapid interactive prototyping.</p>
+            <ul class="service-features-list">
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> UX Architecture & User Flow Mapping</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> High-Fidelity Interactive Prototypes</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Usability Audits & Friction Elimination</li>
+            </ul>
+            <div class="service-tags">
+              <span class="service-tag">#Figma</span>
+              <span class="service-tag">#UserResearch</span>
+              <span class="service-tag">#DesignSprint</span>
+            </div>
+            <a href="#estimator" class="btn btn-secondary btn-sm" style="margin-top: auto;">Estimate Scope →</a>
+          </div>
+
+          <!-- Service 2 -->
+          <div class="service-card">
+            <div class="service-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="16 18 22 12 16 6"></polyline>
+                <polyline points="8 6 2 12 8 18"></polyline>
+              </svg>
+            </div>
+            <h3>Full-Stack Web & Mobile Architecture</h3>
+            <p>Engineering reactive, ultra-reliable web applications and cross-platform native mobile apps utilizing modern typed frameworks.</p>
+            <ul class="service-features-list">
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> React, Next.js & TypeScript Systems</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Real-Time WebSockets & Microservices</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Serverless Cloud Infrastructure</li>
+            </ul>
+            <div class="service-tags">
+              <span class="service-tag">#NextJS</span>
+              <span class="service-tag">#TypeScript</span>
+              <span class="service-tag">#Tailwind</span>
+            </div>
+            <a href="#estimator" class="btn btn-secondary btn-sm" style="margin-top: auto;">Estimate Scope →</a>
+          </div>
+
+          <!-- Service 3 -->
+          <div class="service-card">
+            <div class="service-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 2a10 10 0 0 1 10 10c0 5.5-4.5 10-10 10S2 17.5 2 12A10 10 0 0 1 12 2z"></path>
+                <path d="M12 6a6 6 0 0 1 6 6c0 3.3-2.7 6-6 6s-6-2.7-6-6a6 6 0 0 1 6-6z"></path>
+                <circle cx="12" cy="12" r="2"></circle>
+              </svg>
+            </div>
+            <h3>AI Integration & Intelligent Systems</h3>
+            <p>Integrating state-of-the-art LLMs, generative agents, vector retrieval pipelines, and custom computer vision into intuitive interfaces.</p>
+            <ul class="service-features-list">
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Autonomous AI Agents & Workflows</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Vector Databases & RAG Pipelines</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Natural Language Interface UX</li>
+            </ul>
+            <div class="service-tags">
+              <span class="service-tag">#OpenAI</span>
+              <span class="service-tag">#VectorDB</span>
+              <span class="service-tag">#LangChain</span>
+            </div>
+            <a href="#estimator" class="btn btn-secondary btn-sm" style="margin-top: auto;">Estimate Scope →</a>
+          </div>
+
+          <!-- Service 4 -->
+          <div class="service-card">
+            <div class="service-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                <polyline points="2 17 12 22 22 17"></polyline>
+                <polyline points="2 12 12 17 22 12"></polyline>
+              </svg>
+            </div>
+            <h3>Spatial Computing & Interactive 3D</h3>
+            <p>Building high-framerate WebGL environments, 3D interactive product configurators, and volumetric digital twin command centers.</p>
+            <ul class="service-features-list">
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Hardware-Accelerated WebGL & Three.js</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> 3D Product Customizers & AR Previews</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Volumetric Urban & Telemetry Visualizers</li>
+            </ul>
+            <div class="service-tags">
+              <span class="service-tag">#ThreeJS</span>
+              <span class="service-tag">#WebGL</span>
+              <span class="service-tag">#Shaders</span>
+            </div>
+            <a href="#estimator" class="btn btn-secondary btn-sm" style="margin-top: auto;">Estimate Scope →</a>
+          </div>
+
+          <!-- Service 5 -->
+          <div class="service-card">
+            <div class="service-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="3" width="7" height="7"></rect>
+                <rect x="14" y="3" width="7" height="7"></rect>
+                <rect x="14" y="14" width="7" height="7"></rect>
+                <rect x="3" y="14" width="7" height="7"></rect>
+              </svg>
+            </div>
+            <h3>Enterprise Design Systems & Brand Identity</h3>
+            <p>Creating systematic, accessible multi-brand component libraries and token architectures to accelerate developer velocity.</p>
+            <ul class="service-features-list">
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Automated Figma-to-Code Token Sync</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Accessible WCAG AAA UI Libraries</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Interactive Living Storybook Docs</li>
+            </ul>
+            <div class="service-tags">
+              <span class="service-tag">#Tokens</span>
+              <span class="service-tag">#Storybook</span>
+              <span class="service-tag">#DesignSystems</span>
+            </div>
+            <a href="#estimator" class="btn btn-secondary btn-sm" style="margin-top: auto;">Estimate Scope →</a>
+          </div>
+
+          <!-- Service 6 -->
+          <div class="service-card">
+            <div class="service-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"></path>
+              </svg>
+            </div>
+            <h3>Performance Engineering & Cloud DevOps</h3>
+            <p>Optimizing web applications for sub-second render speeds, automated CI/CD deployments, and bulletproof high-traffic reliability.</p>
+            <ul class="service-features-list">
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Core Web Vitals Optimization</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Global Edge Caching & CDNs</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Multi-Region High Availability</li>
+            </ul>
+            <div class="service-tags">
+              <span class="service-tag">#AWS</span>
+              <span class="service-tag">#Cloudflare</span>
+              <span class="service-tag">#DevOps</span>
+            </div>
+            <a href="#estimator" class="btn btn-secondary btn-sm" style="margin-top: auto;">Estimate Scope →</a>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SECTION 4: PORTFOLIO & SELECTED WORK
+         ====================================================================== -->
+    <section class="section" id="portfolio">
+      <div class="container">
+        
+        <div class="section-header">
+          <span class="section-badge">// 03. SELECTED WORK</span>
+          <h2 class="section-title">Proven Results. <span class="text-gradient">Award-Winning</span> Digital Products.</h2>
+          <p class="section-description">
+            Explore a curated selection of recent flagship platforms, web applications, and interactive experiences engineered by our studio.
+          </p>
+        </div>
+
+        <!-- Portfolio Filtering Controls & Search Bar -->
+        <div class="portfolio-controls">
+          <div class="filter-group">
+            <button class="filter-btn active" data-filter="all">All Work</button>
+            <button class="filter-btn" data-filter="ai">AI & Data</button>
+            <button class="filter-btn" data-filter="mobile">Web & Mobile</button>
+            <button class="filter-btn" data-filter="spatial">Spatial & 3D</button>
+            <button class="filter-btn" data-filter="ecommerce">Luxury & E-Commerce</button>
+          </div>
+
+          <div class="search-box">
+            <svg class="search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+            <input type="text" id="portfolio-search" class="search-input" placeholder="Search projects or technologies..." aria-label="Search portfolio projects">
+          </div>
+        </div>
+
+        <!-- Dynamic Grid Rendered via JavaScript -->
+        <div class="portfolio-grid" id="portfolio-grid">
+          <!-- Populated from PORTFOLIO_DATA -->
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SECTION 5: INTERACTIVE PROJECT ESTIMATOR
+         ====================================================================== -->
+    <section class="section" id="estimator" style="background: var(--bg-secondary);">
+      <div class="container">
+        
+        <div class="section-header">
+          <span class="section-badge">// 04. INTERACTIVE ESTIMATOR</span>
+          <h2 class="section-title">Calculate Your Project Scope <span class="text-gradient">in Seconds</span></h2>
+          <p class="section-description">
+            Configure your technical requirements below to instantly generate a realistic budget estimate and projected delivery timeline.
+          </p>
+        </div>
+
+        <div class="estimator-wrapper">
+          
+          <!-- Left: Configuration Controls -->
+          <div class="estimator-controls">
+            
+            <!-- Step 1: Project Type -->
+            <div class="estimator-step">
+              <span class="step-label">Step 1 — Select Project Type</span>
+              <div class="option-pill-grid">
+                <div class="option-pill type-pill active" data-value="saas">SaaS Web App</div>
+                <div class="option-pill type-pill" data-value="mobile">Mobile iOS/Android</div>
+                <div class="option-pill type-pill" data-value="ecommerce">Luxury E-Commerce</div>
+                <div class="option-pill type-pill" data-value="enterprise">AI & Spatial Platform</div>
+              </div>
+            </div>
+
+            <!-- Step 2: Scale & Maturity -->
+            <div class="estimator-step">
+              <span class="step-label">Step 2 — Select Project Maturity</span>
+              <div class="option-pill-grid">
+                <div class="option-pill scope-pill" data-value="mvp">MVP / 0-to-1 Sprint</div>
+                <div class="option-pill scope-pill active" data-value="growth">Full Product Launch</div>
+                <div class="option-pill scope-pill" data-value="enterprise">Enterprise Scaled</div>
+              </div>
+            </div>
+
+            <!-- Step 3: Desired Velocity -->
+            <div class="estimator-step">
+              <span class="step-label">Step 3 — Desired Timeline & Pace</span>
+              <div class="option-pill-grid">
+                <div class="option-pill timeline-pill" data-value="expedited">Expedited Sprint</div>
+                <div class="option-pill timeline-pill active" data-value="standard">Standard Pace</div>
+                <div class="option-pill timeline-pill" data-value="flexible">Flexible Iterative</div>
+              </div>
+            </div>
+
+            <!-- Step 4: Optional Add-ons -->
+            <div class="estimator-step">
+              <span class="step-label">Step 4 — Select High-Value Add-Ons</span>
+              <div class="addons-list">
+                
+                <label class="addon-item">
+                  <div class="addon-left">
+                    <input type="checkbox" class="addon-checkbox" data-addon="design_system">
+                    <div>
+                      <strong style="color: var(--text-primary); display: block; font-size: 0.95rem;">Enterprise Design System & Figma Tokens</strong>
+                      <span style="font-size: 0.82rem; color: var(--text-muted);">Reusable component library, Storybook & documentation</span>
+                    </div>
+                  </div>
+                  <span class="addon-price">+$4,500</span>
+                </label>
+
+                <label class="addon-item">
+                  <div class="addon-left">
+                    <input type="checkbox" class="addon-checkbox" data-addon="ai_agent">
+                    <div>
+                      <strong style="color: var(--text-primary); display: block; font-size: 0.95rem;">AI Assistant & Vector Search Integration</strong>
+                      <span style="font-size: 0.82rem; color: var(--text-muted);">Autonomous conversational agents & RAG pipelines</span>
+                    </div>
+                  </div>
+                  <span class="addon-price">+$6,000</span>
+                </label>
+
+                <label class="addon-item">
+                  <div class="addon-left">
+                    <input type="checkbox" class="addon-checkbox" data-addon="seo_audit">
+                    <div>
+                      <strong style="color: var(--text-primary); display: block; font-size: 0.95rem;">Core Web Vitals & Sub-Second Speed Tuning</strong>
+                      <span style="font-size: 0.82rem; color: var(--text-muted);">95+ Lighthouse score guarantee & edge CDN setup</span>
+                    </div>
+                  </div>
+                  <span class="addon-price">+$2,500</span>
+                </label>
+
+                <label class="addon-item">
+                  <div class="addon-left">
+                    <input type="checkbox" class="addon-checkbox" data-addon="maintenance">
+                    <div>
+                      <strong style="color: var(--text-primary); display: block; font-size: 0.95rem;">6-Month Priority SLA & Infrastructure Support</strong>
+                      <span style="font-size: 0.82rem; color: var(--text-muted);">Dedicated 24/7 uptime monitoring & monthly feature sprints</span>
+                    </div>
+                  </div>
+                  <span class="addon-price">+$4,000</span>
+                </label>
+
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Right: Calculated Estimate Summary Card -->
+          <div class="estimator-summary-card">
+            <div>
+              <h3 class="summary-title">Estimated Scope</h3>
+              
+              <div class="summary-price-box">
+                <div class="price-label">Projected Investment Range</div>
+                <div class="price-range" id="estimator-price-display">$24,000 - $35,000</div>
+                <div class="duration-tag" id="estimator-duration-display">Estimated Delivery: ~8 Weeks</div>
+              </div>
+
+              <div style="margin-bottom: 12px; font-weight: 600; font-size: 0.95rem; color: var(--text-primary);">
+                Scope Inclusions:
+              </div>
+              <ul class="summary-inclusions" id="estimator-inclusions-list">
+                <!-- Dynamically populated -->
+              </ul>
+            </div>
+
+            <button class="btn btn-primary" id="apply-estimator-to-contact" style="width: 100%;">
+              <span>Apply Scope to Inquiry Form →</span>
+            </button>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SECTION 6: CLIENT REVIEWS & TESTIMONIALS
+         ====================================================================== -->
+    <section class="section" id="testimonials">
+      <div class="container">
+        
+        <div class="section-header">
+          <span class="section-badge">// 05. CLIENT TESTIMONIALS</span>
+          <h2 class="section-title">What Global Leaders Say About <span class="text-gradient">Our Craft</span></h2>
+          <p class="section-description">
+            Read verified feedback from founders, CTOs, and product directors who partnered with AETHERIA to scale their market impact.
+          </p>
+        </div>
+
+        <div class="testimonials-wrapper">
+          <div class="testimonial-track-container">
+            <div class="testimonial-track" id="testimonials-track">
+              <!-- Populated by JavaScript -->
+            </div>
+          </div>
+
+          <!-- Carousel Controls -->
+          <div class="carousel-controls">
+            <button class="carousel-nav-btn" id="carousel-prev" aria-label="Previous testimonial">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M19 12H5M12 19l-7-7 7-7"/>
+              </svg>
+            </button>
+
+            <div class="carousel-dots" id="testimonials-dots">
+              <!-- Dots generated by JS -->
+            </div>
+
+            <button class="carousel-nav-btn" id="carousel-next" aria-label="Next testimonial">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SECTION 7: FREQUENTLY ASKED QUESTIONS (FAQ)
+         ====================================================================== -->
+    <section class="section" id="faq" style="background: var(--bg-secondary);">
+      <div class="container">
+        
+        <div class="section-header">
+          <span class="section-badge">// 06. COMMON QUESTIONS</span>
+          <h2 class="section-title">Frequently Asked <span class="text-gradient">Questions</span></h2>
+          <p class="section-description">
+            Clear, straightforward answers about our engagement models, sprint rhythms, intellectual property ownership, and technical stack.
+          </p>
+        </div>
+
+        <div class="faq-container" id="faq-accordion">
+          <!-- Populated by JavaScript -->
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SECTION 8: CONTACT & PROJECT INQUIRY
+         ====================================================================== -->
+    <section class="section" id="contact">
+      <div class="container">
+        
+        <div class="section-header">
+          <span class="section-badge">// 07. GET IN TOUCH</span>
+          <h2 class="section-title">Let's Build Something <span class="text-gradient">Extraordinary</span></h2>
+          <p class="section-description">
+            Tell us about your product vision, timeline, and goals. We typically evaluate inquiries and schedule an initial discovery call within 4 hours.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          
+          <!-- Left Column: Direct Info & Live Studio World Clock -->
+          <div class="contact-info-panel">
+            
+            <div class="contact-card-box">
+              <h3>Direct Studio Channels</h3>
+              <p style="margin-bottom: 24px; font-size: 0.95rem;">Feel free to email our leadership team directly or schedule an exploratory video briefing.</p>
+              
+              <div class="direct-contact-item">
+                <div class="contact-text-wrap">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color: var(--accent-primary);">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                    <polyline points="22,6 12,13 2,6"></polyline>
+                  </svg>
+                  <div>
+                    <div style="font-size: 0.8rem; color: var(--text-muted); font-family: var(--font-mono);">PRIMARY INBOX</div>
+                    <strong style="color: var(--text-primary); font-size: 0.95rem;">hello@aetheriastudio.com</strong>
+                  </div>
+                </div>
+                <button class="copy-btn" data-copy="hello@aetheriastudio.com">Copy</button>
+              </div>
+
+              <div class="direct-contact-item">
+                <div class="contact-text-wrap">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color: var(--accent-cyan);">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                  </svg>
+                  <div>
+                    <div style="font-size: 0.8rem; color: var(--text-muted); font-family: var(--font-mono);">DIRECT CALL / TELEGRAPH</div>
+                    <strong style="color: var(--text-primary); font-size: 0.95rem;">+1 (415) 890-3200</strong>
+                  </div>
+                </div>
+                <button class="copy-btn" data-copy="+14158903200">Copy</button>
+              </div>
+            </div>
+
+            <!-- Live Studio World Clock -->
+            <div class="studio-clock-card">
+              <div>
+                <div class="clock-label">SAN FRANCISCO HQ (LIVE)</div>
+                <div class="live-clock-time" id="studio-live-clock">--:--:-- PST</div>
+                <div style="font-size: 0.8rem; color: var(--accent-emerald); display: flex; align-items: center; gap: 6px; margin-top: 4px;">
+                  <span class="status-dot"></span> Office Open & Taking Inquiries
+                </div>
+              </div>
+              <div style="text-align: right; color: var(--text-muted); font-size: 0.82rem; font-family: var(--font-mono);">
+                <div>SOMA DISTRICT</div>
+                <div>CALIFORNIA, USA</div>
+              </div>
+            </div>
+
+            <!-- Global Hub Locations -->
+            <div class="contact-card-box">
+              <h4 style="margin-bottom: 12px; font-size: 1.1rem;">International Studio Hubs</h4>
+              <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; font-size: 0.88rem;">
+                <div>
+                  <strong style="color: var(--text-primary); display: block;">San Francisco</strong>
+                  <span style="color: var(--text-muted);">500 Howard St</span>
+                </div>
+                <div>
+                  <strong style="color: var(--text-primary); display: block;">London</strong>
+                  <span style="color: var(--text-muted);">18 Shoreditch High St</span>
+                </div>
+                <div>
+                  <strong style="color: var(--text-primary); display: block;">Tokyo</strong>
+                  <span style="color: var(--text-muted);">Shibuya Stream 21F</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Right Column: Interactive Contact Form -->
+          <div class="contact-form-container">
+            
+            <form id="contact-form" novalidate>
+              <div class="form-group-row">
+                <div class="form-group">
+                  <label class="form-label" for="form-name">Your Full Name *</label>
+                  <input type="text" id="form-name" class="form-input" placeholder="e.g. Alex Morgan" required>
+                  <span class="error-message">Please enter your full name.</span>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="form-email">Work Email *</label>
+                  <input type="email" id="form-email" class="form-input" placeholder="alex@company.com" required>
+                  <span class="error-message">Please provide a valid business email.</span>
+                </div>
+              </div>
+
+              <div class="form-group-row">
+                <div class="form-group">
+                  <label class="form-label" for="form-company">Company / Organization</label>
+                  <input type="text" id="form-company" class="form-input" placeholder="e.g. Acme Health">
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="form-service">Primary Capability Needed</label>
+                  <select id="form-service" class="form-select">
+                    <option value="web">Full-Stack Web & Mobile Architecture</option>
+                    <option value="ai">AI Integration & Intelligent Systems</option>
+                    <option value="spatial">Spatial Computing & Interactive 3D</option>
+                    <option value="design">Product Strategy & UI/UX Design</option>
+                    <option value="branding">Enterprise Design Systems</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- Budget Range Buttons -->
+              <div class="form-group">
+                <label class="form-label">Approximate Project Investment Range</label>
+                <div class="budget-pills">
+                  <button type="button" class="budget-btn" data-budget="$15k - $25k">$15k - $25k</button>
+                  <button type="button" class="budget-btn active" data-budget="$25k - $50k">$25k - $50k</button>
+                  <button type="button" class="budget-btn" data-budget="$50k - $100k">$50k - $100k</button>
+                  <button type="button" class="budget-btn" data-budget="$100k+">$100k+</button>
+                </div>
+                <input type="hidden" id="form-selected-budget" value="$25k - $50k">
+              </div>
+
+              <!-- Message Details -->
+              <div class="form-group">
+                <label class="form-label" for="form-message">
+                  <span>Project Overview & Goals *</span>
+                  <span class="char-counter"><span id="message-char-count">0</span> chars</span>
+                </label>
+                <textarea id="form-message" class="form-textarea" rows="4" placeholder="Briefly describe your objectives, key deliverables, and target launch window..." required></textarea>
+                <span class="error-message">Please enter at least 15 characters describing your project.</span>
+              </div>
+
+              <!-- Submit Button -->
+              <button type="submit" class="btn btn-primary btn-lg" id="form-submit-btn" style="width: 100%;">
+                <span class="spinner"></span>
+                <span class="btn-text">Send Project Inquiry →</span>
+              </button>
+
+              <p style="font-size: 0.8rem; color: var(--text-muted); text-align: center; margin-top: 14px;">
+                🔒 Strict confidentiality guaranteed. Non-disclosure agreements (NDAs) signed prior to discovery calls.
+              </p>
+            </form>
+
+            <!-- Success State Message (Revealed on submission) -->
+            <div class="form-success-state" id="form-success-state">
+              <div class="success-icon-wrap">
+                <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+              </div>
+              <h3 style="font-size: 1.8rem; margin-bottom: 10px;">Inquiry Successfully Transmitted!</h3>
+              <p style="margin-bottom: 20px; font-size: 1.05rem;">
+                Thank you for reaching out. We have registered your inquiry under reference code:
+              </p>
+              <div style="display: inline-block; padding: 8px 24px; background: var(--bg-tertiary); border: 1px dashed var(--accent-cyan); border-radius: var(--border-radius-md); font-family: var(--font-mono); font-size: 1.25rem; font-weight: 700; color: var(--accent-cyan); margin-bottom: 24px;" id="inquiry-reference-code">
+                AETH-4912
+              </div>
+              <p style="font-size: 0.95rem; color: var(--text-secondary); max-width: 480px; margin: 0 auto 30px auto;">
+                Our principal design architect will review your project brief and email you within 4 hours to arrange an introductory strategy call.
+              </p>
+              <button class="btn btn-secondary" id="form-reset-btn">Send Another Message</button>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- ======================================================================
+       FOOTER SECTION
+       ====================================================================== -->
+  <footer class="footer">
+    <div class="container">
+      
+      <div class="footer-top-grid">
+        
+        <!-- Brand Column -->
+        <div class="footer-brand">
+          <a href="#home" class="brand-logo">
+            <div class="logo-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                <polyline points="2 17 12 22 22 17"></polyline>
+                <polyline points="2 12 12 17 22 12"></polyline>
+              </svg>
+            </div>
+            <span>AETHERIA</span>
+          </a>
+          <p>
+            Architecting high-impact digital experiences, spatial computing systems, and intelligent applications for visionary teams worldwide.
+          </p>
+          <div style="font-size: 0.85rem; color: var(--accent-emerald); display: flex; align-items: center; gap: 8px;">
+            <span class="status-dot"></span> All Global Services Operational
+          </div>
+        </div>
+
+        <!-- Sitemap: Capabilities -->
+        <div class="footer-col">
+          <h4>Capabilities</h4>
+          <ul class="footer-links">
+            <li><a href="#services" class="footer-link">Product Design (UI/UX)</a></li>
+            <li><a href="#services" class="footer-link">Full-Stack Engineering</a></li>
+            <li><a href="#services" class="footer-link">AI Agents & RAG</a></li>
+            <li><a href="#services" class="footer-link">Spatial 3D & WebGL</a></li>
+            <li><a href="#services" class="footer-link">Design Token Systems</a></li>
+          </ul>
+        </div>
+
+        <!-- Sitemap: Quick Links -->
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="#about" class="footer-link">About Studio</a></li>
+            <li><a href="#portfolio" class="footer-link">Selected Projects</a></li>
+            <li><a href="#estimator" class="footer-link">Cost Estimator</a></li>
+            <li><a href="#testimonials" class="footer-link">Client Reviews</a></li>
+            <li><a href="#faq" class="footer-link">Studio FAQ</a></li>
+          </ul>
+        </div>
+
+        <!-- Newsletter Column -->
+        <div class="footer-col">
+          <h4>AETHERIA Dispatch</h4>
+          <p style="font-size: 0.88rem; color: var(--text-secondary); margin-bottom: 12px;">
+            A quarterly curated digest of engineering breakthroughs, UI patterns, and spatial tech analysis.
+          </p>
+          <form class="newsletter-form" id="newsletter-form">
+            <input type="email" id="newsletter-email" class="newsletter-input" placeholder="colleague@domain.com" required aria-label="Newsletter email address">
+            <button type="submit" class="btn btn-primary btn-sm" aria-label="Subscribe to newsletter">→</button>
+          </form>
+          <span style="font-size: 0.75rem; color: var(--text-muted); display: block; margin-top: 6px;">Zero spam. Unsubscribe with 1-click anytime.</span>
+        </div>
+
+      </div>
+
+      <!-- Footer Bottom Row -->
+      <div class="footer-bottom-row">
+        <div>
+          © 2026 AETHERIA Studio Inc. All rights reserved. Precision engineered with clean modern HTML, CSS, and JavaScript.
+        </div>
+        <div class="social-links">
+          <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="GitHub Profile">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+            </svg>
+          </a>
+          <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="X Twitter Profile">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+            </svg>
+          </a>
+          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="LinkedIn Profile">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+              <rect x="2" y="9" width="4" height="12"></rect>
+              <circle cx="4" cy="4" r="2"></circle>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ======================================================================
+       FLOATING BACK TO TOP BUTTON
+       ====================================================================== -->
+  <button id="back-to-top" aria-label="Back to top of page">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </button>
+
+  <!-- ======================================================================
+       MODAL 1: PROJECT DETAIL DIALOG
+       ====================================================================== -->
+  <div class="modal-overlay" id="project-modal" role="dialog" aria-modal="true" aria-labelledby="project-modal-title">
+    <div class="modal-dialog">
+      <button class="modal-close-btn" onclick="closeModal('project-modal')" aria-label="Close project modal">&times;</button>
+      <div id="project-modal-content">
+        <!-- Injected via JavaScript -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ======================================================================
+       MODAL 2: BOOK CONSULTATION QUICK MODAL
+       ====================================================================== -->
+  <div class="modal-overlay" id="consultation-modal" role="dialog" aria-modal="true">
+    <div class="modal-dialog" style="max-width: 580px;">
+      <button class="modal-close-btn" onclick="closeModal('consultation-modal')" aria-label="Close consultation modal">&times;</button>
+      <div style="text-align: center; margin-bottom: 24px;">
+        <span class="section-badge">SCHEDULE DISCOVERY</span>
+        <h3 style="font-size: 1.8rem; margin-top: 8px; margin-bottom: 8px;">Book a Technical Consultation</h3>
+        <p style="font-size: 0.95rem;">Join a 30-minute video session with our Principal Architect to explore technical feasibility, sprint milestones, and pricing.</p>
+      </div>
+
+      <div style="background: var(--bg-tertiary); padding: 18px; border-radius: var(--border-radius-md); border: 1px solid var(--border-subtle); margin-bottom: 24px;">
+        <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 10px;">
+          <div class="status-dot"></div>
+          <strong style="color: var(--text-primary); font-size: 0.95rem;">Instant Calendar Sync</strong>
+        </div>
+        <p style="font-size: 0.88rem; color: var(--text-secondary); margin: 0;">
+          Select your timezone and reserve directly on our partner board. No back-and-forth email scheduling required.
+        </p>
+      </div>
+
+      <div style="display: flex; flex-direction: column; gap: 14px;">
+        <a href="#contact" class="btn btn-primary" onclick="closeModal('consultation-modal')" style="width: 100%;">
+          <span>Open Inquiry Form & Briefing Details →</span>
+        </a>
+        <button class="btn btn-secondary" onclick="closeModal('consultation-modal')" style="width: 100%;">
+          <span>Close Window</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/portfolio-data.js"></script>
+  <script src="js/canvas-bg.js"></script>
+  <script src="js/estimator.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
